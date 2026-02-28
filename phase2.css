@@ -1,0 +1,143 @@
+/* ===== Phase 2 Enhancements ===== */
+
+/* Top 3 student highlights */
+.ranking tbody tr:nth-child(1) {
+  background: #fef3c7;
+}
+
+/* Gold */
+.ranking tbody tr:nth-child(2) {
+  background: #e0f2fe;
+}
+
+/* Silver */
+.ranking tbody tr:nth-child(3) {
+  background: #d1fae5;
+}
+
+/* Bronze */
+
+/* Row hover effect */
+.ranking tbody tr:hover {
+  background: #f3f4f6;
+  cursor: pointer;
+}
+
+/* Most Improved badge */
+.improved-badge {
+  display: inline-block;
+  background: #10b981;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 5px;
+  margin-left: 0.4rem;
+}
+
+/* Chart hover cursor */
+#classChart canvas,
+#studentTrendChart canvas {
+  cursor: pointer;
+}
+
+/* Chart tooltip style */
+.chartjs-tooltip {
+  background: rgba(37, 99, 235, 0.8);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+
+  .charts,
+  .trend {
+    flex: 1 1 100%;
+  }
+
+  .controls input,
+  .controls select {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+}
+/* ===== Phase 2+ Enhancements ===== */
+
+/* Top 3 student highlights */
+.ranking tbody tr:nth-child(1) {
+  background: #fef3c7;
+}
+
+/* Gold */
+.ranking tbody tr:nth-child(2) {
+  background: #e0f2fe;
+}
+
+/* Silver */
+.ranking tbody tr:nth-child(3) {
+  background: #d1fae5;
+}
+
+/* Bronze */
+
+/* Row hover effect */
+.ranking tbody tr:hover {
+  background: #f3f4f6;
+  cursor: pointer;
+}
+
+/* Most Improved badge */
+.improved-badge {
+  display: inline-block;
+  background: #10b981;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 5px;
+  margin-left: 0.4rem;
+}
+
+/* Chart hover cursor */
+#classChart canvas,
+#studentTrendChart canvas {
+  cursor: pointer;
+}
+
+/* Chart tooltip style */
+.chartjs-tooltip {
+  background: rgba(37, 99, 235, 0.8);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/* AI Feedback Box */
+.ai-feedback {
+  background: #e0f7fa;
+  border-left: 4px solid #00bcd4;
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  color: #006064;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+
+  .charts,
+  .trend {
+    flex: 1 1 100%;
+  }
+
+  .controls input,
+  .controls select {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+}

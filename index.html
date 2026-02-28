@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BCM Performance Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <title>BCM Performance Tracker Phase 2</title>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
   <div id="loading-overlay">
     <div class="loader"></div>
   </div>
-
   <div id="toast-container"></div>
 
   <header>
-    <h1>BCM Performance Tracker</h1>
+    <h1>BCM Performance Tracker Phase 2</h1>
     <div class="login">
       <input type="password" id="teacher-password" placeholder="Admin Password">
       <button id="login-btn">Login</button>
@@ -71,15 +71,20 @@
             <th>#</th>
             <th>Name</th>
             <th>Total</th>
+            <th>Feedback</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody id="ranking-body"></tbody>
       </table>
     </section>
+
+    <section class="student-trend" id="student-trend-section" style="display:none;">
+      <h3 id="student-trend-title">Student Performance</h3>
+      <canvas id="studentTrendChart"></canvas>
+    </section>
   </main>
 
   <script src="script.js"></script>
 </body>
-
 </html>
