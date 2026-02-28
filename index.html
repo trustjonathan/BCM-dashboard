@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCM Performance Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div id="loading-overlay">
+    <div class="loader"></div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <header>
+    <h1>BCM Performance Tracker</h1>
+    <div class="login">
+      <input type="password" id="teacher-password" placeholder="Admin Password">
+      <button id="login-btn">Login</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <div class="add-student">
+        <input type="text" id="student-name-input" placeholder="Enter student name">
+        <button id="add-student-btn" disabled>Add Student</button>
+      </div>
+      <div class="submit-score">
+        <select id="select-student" disabled></select>
+        <select id="subject-select" disabled>
+          <option value="bio">Biology</option>
+          <option value="chem">Chemistry</option>
+          <option value="math">Mathematics</option>
+        </select>
+        <input type="text" id="assessment-input" placeholder="Enter assessment/test" disabled>
+        <input type="number" id="score-input" placeholder="Score" disabled>
+        <button id="submit-score-btn" disabled>Submit Score</button>
+        <button id="export-btn" disabled>Export CSV</button>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div><strong>Total Students:</strong> <span id="kpi-size">0</span></div>
+      <div><strong>Class Average:</strong> <span id="kpi-average">0</span></div>
+      <div><strong>Top Student:</strong> <span id="kpi-best">-</span></div>
+      <div><strong>Most Improved:</strong> <span id="kpi-improved">-</span></div>
+    </section>
+
+    <section class="dashboard">
+      <div class="charts">
+        <canvas id="classChart"></canvas>
+      </div>
+      <div class="trend">
+        <h3 id="trend-title">Student Trend</h3>
+        <canvas id="trendChart"></canvas>
+      </div>
+    </section>
+
+    <section class="ranking">
+      <h2>Class Ranking</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="ranking-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
